@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leona — private AI conversations that become your own notes</title>
+<meta name="description" content="Leona is a Mac app for thinking with AI. Talk to a model on your own Mac, then keep what matters as Markdown files you approve and own.">
+<meta property="og:title" content="Leona">
+<meta property="og:description" content="A Mac app for thinking with AI. Keep what matters as Markdown files you approve and own.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scottmcevoy.com/leona/">
+<meta property="og:image" content="https://scottmcevoy.com/leona/media/chat.jpg">
+<meta property="og:image:alt" content="Leona on a Mac: a conversation answered from the Library, with the pages it used.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" href="assets/mark.svg" type="image/svg+xml">
+</head>
+<body>
+
+<header class="top">
+  <a class="wordmark" href="#top" aria-label="Leona home"><span class="L">L</span><span class="rest">eona</span></a>
+  <nav>
+    <a href="#see">See it</a>
+    <a href="#how">How it works</a>
+    <a href="#privacy">Privacy</a>
+    <a href="#features">Features</a>
+    <a href="#faq">Questions</a>
+    <a class="nav-cta" href="#download">Download</a>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="hero-text">
+    <p class="eyebrow">For Mac · Apple silicon · macOS 14 or later</p>
+    <h1>Think with AI.<br>Keep what matters,<br>in files you own.</h1>
+    <p class="lede">Leona is a quiet Mac app for working with AI models. Talk to a model running on your own Mac, or one you choose in the cloud. When a conversation is worth keeping, Leona proposes notes for your Library: plain Markdown files in a folder you pick, written only after you approve them.</p>
+    <div class="cta-row">
+      <a class="button primary" href="#download">Download for Mac</a>
+      <a class="button ghost" href="#see">See it in use</a>
+    </div>
+    <p class="fine">In private testing: download, then request a free test license.</p>
+  </div>
+  <div class="hero-art" aria-hidden="true">
+    <svg viewBox="0 0 400 300" class="mountains">
+      <circle cx="295" cy="88" r="44" class="sun"/>
+      <path class="ridge r1" d="M0 190 Q60 140 120 170 T240 110 T330 160 T400 150 V300 H0Z"/>
+      <path class="ridge r2" d="M0 225 Q70 175 140 205 T260 160 T360 195 T400 185 V300 H0Z"/>
+      <path class="ridge r3" d="M0 265 Q75 225 140 250 T275 215 T400 240 V300 H0Z"/>
+      <path class="seam" d="M400 150 C330 175 260 205 185 228 C120 248 60 262 0 270"/>
+    </svg>
+  </div>
+</section>
+
+<section class="showcase" aria-label="Leona in use">
+  <figure class="window">
+    <video class="demo" src="media/chat.mp4" poster="media/chat-poster.jpg" width="1440" height="932" autoplay muted loop playsinline controls preload="metadata" aria-label="A question typed into Leona, the answer appearing, then the Library pages it used"></video>
+    <figcaption>A question about an invented bakery business, answered from its Library. The pages the answer used are listed on the right.</figcaption>
+  </figure>
+</section>
+
+<section id="how" class="band">
+  <h2>How it works</h2>
+  <ol class="steps">
+    <li>
+      <span class="num">1</span>
+      <h3>Talk</h3>
+      <p>Ask, draft and think out loud with a model on your Mac (through Ollama), or with Anthropic, OpenAI or OpenRouter using your own key. Attach a PDF or a Word document; dictate if you prefer.</p>
+    </li>
+    <li>
+      <span class="num">2</span>
+      <h3>Review</h3>
+      <p>Press Save. Leona proposes new or updated pages for the right section of your Library and shows exactly what would change. Untick a page, edit it, or tell Leona how to revise it: “shorter, dates first”.</p>
+    </li>
+    <li>
+      <span class="num">3</span>
+      <h3>Keep</h3>
+      <p>Approved pages are written as Markdown files in your folder, with every earlier version kept so you can go back. Later conversations can draw on them and show which pages they used.</p>
+    </li>
+  </ol>
+</section>
+
+<section id="see" class="see">
+  <h2>See it in use</h2>
+  <p class="section-lede">Short clips and pictures taken from Leona itself. Everything in them is invented: the bakery, its people and its numbers.</p>
+  <div class="clips">
+    <figure class="clip">
+      <video src="media/search.mp4" poster="media/search-poster.jpg" width="1440" height="932" controls muted playsinline preload="none" aria-label="Typing into the ⌘K search box, with results updating"></video>
+      <figcaption><strong>Find anything with ⌘K.</strong> Pages, notes, conversations and actions, matched as you type.</figcaption>
+    </figure>
+    <figure class="clip">
+      <video src="media/tour.mp4" poster="media/tour-poster.jpg" width="1440" height="932" controls muted playsinline preload="none" aria-label="The eight stops of the welcome tour"></video>
+      <figcaption><strong>A short welcome tour.</strong> Eight stops the first time you open Leona; take it again any time from Help or Settings.</figcaption>
+    </figure>
+    <figure class="clip">
+      <video src="media/themes.mp4" poster="media/themes-poster.jpg" width="1440" height="932" controls muted playsinline preload="none" aria-label="The same window in each of the five themes, then in dark"></video>
+      <figcaption><strong>Five themes, light or dark.</strong> Default, Minimalist, Gothic, Cyberpunk and Terminal.</figcaption>
+    </figure>
+  </div>
+
+  <div class="gallery">
+    <figure class="shot">
+      <a href="media/library-graph.jpg"><img src="media/library-graph.jpg" width="2000" height="1294" loading="lazy" decoding="async" alt="The Library home: a graph of sections, folders and pages joined by their links, with recently changed pages below"></a>
+      <figcaption><strong>Your Library at a glance.</strong> Sections, folders and pages, and the links between them.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="media/library-page.jpg"><img src="media/library-page.jpg" width="2000" height="1294" loading="lazy" decoding="async" alt="A Library page with links to other pages, the pages that link to it, and its history"></a>
+      <figcaption><strong>A Library page.</strong> Links to other pages, the pages that link back, and its history: compare or restore an earlier version.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="media/review.jpg"><img src="media/review.jpg" width="1280" height="1080" loading="lazy" decoding="async" alt="The review window listing one page to add to and one new page, each with its changes line by line"></a>
+      <figcaption><strong>Saving a conversation.</strong> Leona proposes page changes and shows each one line by line, with the sentence from the chat it came from. Untick, edit or ask for a revision, then save.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="media/todos.jpg"><img src="media/todos.jpg" width="2000" height="1294" loading="lazy" decoding="async" alt="A conversation with its to-do list open beside it; two items are for named people"></a>
+      <figcaption><strong>To-dos from a conversation.</strong> Action items pulled out of the chat, with who each one is for.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="media/notes.jpg"><img src="media/notes.jpg" width="2000" height="1294" loading="lazy" decoding="async" alt="Notes: a list of notes and a meeting note open, with Dictate and Save to Library at the top"></a>
+      <figcaption><strong>Notes.</strong> A meeting written up as a note, with dictation and Save to Library at the top.</figcaption>
+    </figure>
+    <figure class="shot">
+      <a href="media/calendar.jpg"><img src="media/calendar.jpg" width="2000" height="1294" loading="lazy" decoding="async" alt="The calendar filling the window, showing a month with a few events"></a>
+      <figcaption><strong>The calendar, full size.</strong> Press ⌘Y; the small one stays in the sidebar.</figcaption>
+    </figure>
+    <figure class="shot wide">
+      <a href="media/chat-dark.jpg"><img src="media/chat-dark.jpg" width="2000" height="1294" loading="lazy" decoding="async" alt="The conversation window in the dark look"></a>
+      <figcaption><strong>Dark, for the evening.</strong> Every theme has a light and a dark version.</figcaption>
+    </figure>
+  </div>
+
+  <div class="themes" aria-label="The five themes">
+    <figure><img src="media/theme-standard.jpg" width="960" height="621" loading="lazy" decoding="async" alt="Default theme"><figcaption>Default</figcaption></figure>
+    <figure><img src="media/theme-minimalist.jpg" width="960" height="621" loading="lazy" decoding="async" alt="Minimalist theme"><figcaption>Minimalist</figcaption></figure>
+    <figure><img src="media/theme-gothic.jpg" width="960" height="621" loading="lazy" decoding="async" alt="Gothic theme"><figcaption>Gothic</figcaption></figure>
+    <figure><img src="media/theme-cyberpunk.jpg" width="960" height="621" loading="lazy" decoding="async" alt="Cyberpunk theme"><figcaption>Cyberpunk</figcaption></figure>
+    <figure><img src="media/theme-terminal.jpg" width="960" height="621" loading="lazy" decoding="async" alt="Terminal theme"><figcaption>Terminal</figcaption></figure>
+  </div>
+</section>
+
+<section id="privacy" class="privacy">
+  <div class="privacy-intro">
+    <h2>Privacy, in plain words</h2>
+    <p>Each line says what Leona does, and where it stops. The full <a href="privacy.html">privacy notice</a> covers this website and license requests too.</p>
+  </div>
+  <ul class="claims">
+    <li><strong>Private conversations.</strong> In a Private conversation, your messages go only to a model running on this Mac.</li>
+    <li><strong>Your files.</strong> Your knowledge base is plain text files in a folder you choose. They stay readable without this app.</li>
+    <li><strong>You approve every change.</strong> Nothing is added to your knowledge base until you approve it.</li>
+    <li><strong>Conversations at rest.</strong> Conversations are stored encrypted on this Mac.</li>
+    <li><strong>Locked chats.</strong> A chat you lock with a password is sealed with its own key. Leona does not store your password, and without the password or the recovery code nobody can open the chat, including Leona. If you lose both, the chat cannot be recovered.</li>
+    <li><strong>Keys.</strong> Your API keys are stored in the macOS Keychain.</li>
+    <li><strong>Before a cloud send.</strong> Before sending to a cloud model, Leona looks for common identifiers such as emails and card numbers, the terms you list, and, with the name finder on, names of people, places and organizations, and offers to hide them. It misses things and sometimes flags harmless words, so keep anything truly sensitive on a local model with Private on.</li>
+  </ul>
+</section>
+
+<section id="features" class="band">
+  <h2>Everything in one calm window</h2>
+  <div class="grid">
+    <article><h3>Library</h3><p>Sections such as Personal and Work, folders, links between pages, page history, and a graph of how it all connects.</p></article>
+    <article><h3>Search everything</h3><p>⌘K finds pages, notes, conversations and actions by any word in them, and forgives a capital letter or a stray full stop.</p></article>
+    <article><h3>Notes</h3><p>Quick notes, kept encrypted or as plain Markdown files, your choice per note. Dictate into a note, or let it listen to a meeting.</p></article>
+    <article><h3>To-dos and calendar</h3><p>Pull action items out of a conversation or meeting notes, with who each is for. Put dates on a calendar that stays on your Mac.</p></article>
+    <article><h3>Reading</h3><p>An RSS reader that shows plain text, and a browser with tracker blocking and nothing remembered after you quit. Save what you read to your Library.</p></article>
+    <article><h3>Documents</h3><p>Attach PDFs and Word files, import them into your Library, and turn a conversation into a PDF, Word or Markdown file.</p></article>
+    <article><h3>Keyboard first</h3><p>Every place has a shortcut; ⌘K reaches everything else. Arrow keys and Tab move through lists.</p></article>
+    <article><h3>Your look</h3><p>Light or dark, and five themes: Default, Minimalist, Gothic, Cyberpunk and Terminal.</p></article>
+    <article><h3>Bounded help</h3><p>An agent that can only use a short list of tools on your Mac, shows its plan, and asks before every change.</p></article>
+  </div>
+</section>
+
+<section id="download" class="download">
+  <h2>Download</h2>
+  <div class="download-card">
+    <p class="badge">Private test</p>
+    <p>Leona is in private testing. Anyone can download it; it opens with a free test license, which you request below.</p>
+    <a class="button primary" href="downloads/Leona.dmg" download>Download for Mac (.dmg)</a>
+    <p class="fine release-info">Version 0.1.0 (build 4) · October 10, 2026 · 7 MB · SHA-256 <code>2f0937875b1b2df192d17d74ff4bd9f30acda96539b2419ae4f92e5a6ade6485</code></p>
+    <p class="fine">Requires macOS 14 or later on a Mac with Apple silicon. 16 GB of memory or more is recommended for local models.</p>
+    <p class="fine">Signed with a Developer ID and notarized by Apple.</p>
+  </div>
+  <div class="download-card license-card" id="license">
+    <h3>Request a test license</h3>
+    <p>Write to us with the email address you want the license for. Each request is read by a person; when it is approved, your license code arrives by email. Paste it into Leona when it asks.</p>
+    <a class="button ghost" href="mailto:info@scottmcevoy.com?subject=Leona%20test%20license%20request&amp;body=Hello%2C%0A%0AI%20would%20like%20a%20Leona%20test%20license.%0A%0AName%3A%20%0AEmail%20for%20the%20license%3A%20%0AWhat%20I%20would%20use%20it%20for%20(optional)%3A%20%0A">Request a test license by email</a>
+    <p class="fine">Or write to <a href="mailto:info@scottmcevoy.com">info@scottmcevoy.com</a>.</p>
+    <p class="fine">We use your address only to send your license and news about the test. See the <a href="privacy.html">privacy notice</a>.</p>
+  </div>
+</section>
+
+<section id="faq" class="band faq">
+  <h2>Questions</h2>
+  <details><summary>Do I need an internet connection?</summary><p>Not with a local model: conversations, your Library, search, notes, to-dos and the calendar work on your Mac. Cloud models, RSS feeds and the browser need the internet, and only connect when you use them.</p></details>
+  <details><summary>Which AI models can I use?</summary><p>Models running on your Mac through Ollama, and cloud models from Anthropic, OpenAI or OpenRouter with your own key. Leona suggests local models that fit your Mac’s memory.</p></details>
+  <details><summary>Can I read my notes without Leona?</summary><p>Yes. Library pages are Markdown files in your folder. Open them in any text editor, or in Obsidian.</p></details>
+  <details><summary>Does Leona collect data about me?</summary><p>No analytics. Leona connects only to the AI providers, feeds and websites you choose, and to scottmcevoy.com for the update check you can turn off.</p></details>
+  <details><summary>How do I get a license?</summary><p>During testing, licenses are free. Request one by email from the Download section; it arrives by email once approved, and works without an internet connection.</p></details>
+  <details><summary>How much will it cost?</summary><p>Pricing will be announced before release.</p></details>
+</section>
+
+</main>
+
+<footer>
+  <span class="wordmark small"><span class="L">L</span><span class="rest">eona</span></span>
+  <nav><a href="privacy.html">Privacy notice</a><a href="mailto:info@scottmcevoy.com">Contact</a></nav>
+  <p class="fine">© 2026 Scott McEvoy. Mac, macOS and Apple silicon are trademarks of Apple Inc.</p>
+</footer>
+
+<script>
+  // For anyone who has asked their Mac for less motion, the clip at the top waits to be played.
+  if (window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches) {
+    document.querySelectorAll("video[autoplay]").forEach(function (v) { v.removeAttribute("autoplay"); v.pause(); });
+  }
+</script>
+</body>
+</html>
