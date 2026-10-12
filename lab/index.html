@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'self'; img-src 'self'; font-src 'self'; base-uri 'none'; form-action 'none'">
+<meta name="referrer" content="no-referrer">
+<title>Lab · Scott McEvoy</title>
+<meta name="description" content="Scott McEvoy creates things, helps others create things, and thinks about who owns what they make.">
+<meta name="theme-color" content="#fbf9f4">
+<meta property="og:title" content="Lab">
+<meta property="og:description" content="Scott McEvoy creates things, helps others create things, and thinks about who owns what they make.">
+<meta property="og:url" content="https://scottmcevoy.com/lab/">
+<link rel="canonical" href="https://scottmcevoy.com/lab/">
+<link rel="alternate" type="application/rss+xml" title="Scott McEvoy: Thoughts" href="/feed.xml">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="/fonts/source-serif-4-latin-opsz-italic.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="/fonts/source-serif-4-latin-opsz-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/styles.css?v=6b99fbb08f">
+</head>
+<body class="">
+<a class="skip" href="#main">Skip to content</a>
+<div class="sheet">
+<header class="top">
+  <a class="wordmark" href="/">Scott McEvoy</a>
+  <nav aria-label="Sections"><ol role="list"><li><a href="/lab/" aria-current="page"><span class="no" aria-hidden="true">01</span>Lab</a></li><li><a href="/thoughts/"><span class="no" aria-hidden="true">02</span>Thoughts</a></li><li><a href="/talks/"><span class="no" aria-hidden="true">03</span>Talks</a></li><li><a href="/recommended/"><span class="no" aria-hidden="true">04</span>Things I Recommend</a></li><li><a href="/about/"><span class="no" aria-hidden="true">05</span>About Me</a></li></ol></nav>
+</header>
+
+<main id="main" class="page page-lab">
+  <header class="page-head">
+    <span class="bignum" aria-hidden="true">01</span>
+    <h1>Lab</h1>
+    <p class="dek">Prototypes, one plan, and one honorable retirement.</p>
+  </header>
+  <ol class="builds" role="list">
+    <li class="build" id="leona">
+      <figure class="shot"><img src="/img/leona-light.jpg" width="1600" height="1035" alt="Leona answering a question about an invented bakery from its notes, with the source pages listed beside the reply." decoding="async"></figure>
+      <div class="build-text">
+        <h2>Leona</h2>
+        <p>A Mac app for thinking with AI. Conversations worth keeping become notes in a folder you own.</p>
+        <p class="status">In private testing</p>
+      </div>
+    </li>
+    <li class="build" id="system-one">
+      <figure class="shot tile">
+    <svg class="tile-art" viewBox="0 0 480 300" role="img" aria-labelledby="t-s1">
+      <title id="t-s1">Diagram: a small System One model decides first, and only some requests go on to the large model.</title>
+      <g class="ink" fill="none" stroke-width="1.25">
+        <rect x="24" y="126" width="104" height="48" rx="4"/>
+        <rect x="188" y="114" width="104" height="72" rx="4" class="accent-stroke"/>
+        <rect x="352" y="50" width="104" height="72" rx="4"/>
+        <rect x="352" y="194" width="104" height="56" rx="4" stroke-dasharray="3 4"/>
+        <path d="M128 150 H188"/>
+        <path d="M292 136 C322 136 322 86 352 86"/>
+        <path d="M292 164 C322 164 322 222 352 222"/>
+      </g>
+      <g class="label">
+        <text x="76" y="155" text-anchor="middle">request</text>
+        <text x="240" y="146" text-anchor="middle" class="accent-fill">System One</text>
+        <text x="240" y="166" text-anchor="middle" class="num">p = 0.94</text>
+        <text x="404" y="91" text-anchor="middle">LLM</text>
+        <text x="404" y="227" text-anchor="middle">skip</text>
+      </g>
+    </svg><figcaption>Illustration.</figcaption></figure>
+      <div class="build-text">
+        <h2>System One tools</h2>
+        <p>Optimizing LLM harnesses with small, fast System One models I developed.</p>
+        <p class="status">Ongoing</p>
+      </div>
+    </li>
+    <li class="build" id="opentto">
+      <figure class="shot tile">
+    <svg class="tile-art" viewBox="0 0 480 300" role="img" aria-labelledby="t-otto">
+      <title id="t-otto">Diagram: three tech transfer offices sharing one set of scripts, skills and workflows.</title>
+      <g class="ink" fill="none" stroke-width="1.25">
+        <rect x="24" y="44" width="104" height="44" rx="4"/>
+        <rect x="24" y="128" width="104" height="44" rx="4"/>
+        <rect x="24" y="212" width="104" height="44" rx="4"/>
+        <rect x="216" y="100" width="128" height="100" rx="4" class="accent-stroke"/>
+        <path d="M128 66 C172 66 172 128 216 128"/>
+        <path d="M128 150 H216"/>
+        <path d="M128 234 C172 234 172 172 216 172"/>
+        <path d="M344 150 H392" stroke-dasharray="3 4"/>
+      </g>
+      <g class="label">
+        <text x="76" y="71" text-anchor="middle">office A</text>
+        <text x="76" y="155" text-anchor="middle">office B</text>
+        <text x="76" y="239" text-anchor="middle">office C</text>
+        <text x="280" y="128" text-anchor="middle" class="accent-fill">OpenTTO</text>
+        <text x="280" y="152" text-anchor="middle">scripts</text>
+        <text x="280" y="170" text-anchor="middle">skills</text>
+        <text x="280" y="188" text-anchor="middle">workflows</text>
+        <text x="400" y="155">you?</text>
+      </g>
+    </svg><figcaption>Illustration.</figcaption></figure>
+      <div class="build-text">
+        <h2>OpenTTO</h2>
+        <p>Open tools for tech transfer offices: scripts, automations and Claude skills, shared between offices.</p>
+        <p class="status">Getting started</p>
+      </div>
+    </li>
+    <li class="build" id="voxsms">
+      <figure class="shot tile">
+    <svg class="tile-art" viewBox="0 0 480 300" role="img" aria-labelledby="t-vox">
+      <title id="t-vox">Illustration: two text-message bubbles.</title>
+      <g class="ink" fill="none" stroke-width="1.25">
+        <path d="M60 78 h196 a10 10 0 0 1 10 10 v40 a10 10 0 0 1 -10 10 h-180 l-16 14 v-14 a10 10 0 0 1 -10 -10 v-40 a10 10 0 0 1 10 -10 z"/>
+        <path d="M224 170 h196 a10 10 0 0 1 10 10 v40 a10 10 0 0 1 -10 10 v14 l-16 -14 h-180 a10 10 0 0 1 -10 -10 v-40 a10 10 0 0 1 10 -10 z" class="accent-stroke"/>
+      </g>
+      <g class="label">
+        <text x="76" y="114">Running late?</text>
+        <text x="240" y="206">Ten minutes.</text>
+      </g>
+    </svg><figcaption>Illustration.</figcaption></figure>
+      <div class="build-text">
+        <h2>VoxSMS</h2>
+        <p>A messaging client for VoIP.ms: texts on your own VoIP number.</p>
+        <p class="status">Deprecated</p>
+      </div>
+    </li>
+  </ol>
+</main>
+<footer class="foot">
+  <p>Nothing here is legal advice. Some of it is software.</p>
+  <p>Set in Source Serif 4 on graph paper. Served by a few hundred lines of Node. No trackers, no cookies.</p>
+  <p><span class="num">&copy; 2026</span> Scott McEvoy</p>
+  <!-- Ask-AI block: added in a later step. Mount it here. -->
+  <div class="ask-ai" id="ask-ai" hidden></div>
+</footer>
+</div>
+</body>
+</html>
