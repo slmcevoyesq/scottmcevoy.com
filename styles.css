@@ -216,28 +216,6 @@ a:hover { text-decoration-color: var(--accent); }
 .footnote a { text-decoration-color: var(--rule); }
 .footnote a:hover { color: var(--ink); text-decoration-color: var(--accent); }
 .footnote:target { color: var(--ink); }
-
-/* The footnote's rule: a small golden spiral unfurls beneath the line, then fades into a light underline.
-   Static (just the underline) when motion is reduced. */
-.hero .footnote { padding-bottom: 1.4em; }
-.unfurl { position: relative; display: inline-block; }
-.spiral-art, .rule-art { position: absolute; overflow: visible; max-width: none; pointer-events: none; }
-.spiral-art { top: 100%; right: 100%; width: 0.765em; height: 1.19em; }
-.rule-art { top: 100%; left: 0; width: 100%; height: 1px; }
-.spiral-art path, .rule-art path {
-  fill: none;
-  stroke-linecap: round;
-  stroke-dasharray: 1;
-  stroke-dashoffset: 0;
-  vector-effect: non-scaling-stroke;
-}
-.spiral-art path { stroke: var(--accent); stroke-width: 1px; opacity: 0; }
-.rule-art path { stroke: var(--rule); stroke-width: 1px; }
-@media (prefers-reduced-motion: no-preference) {
-  .spiral-art path { stroke-dashoffset: 1; opacity: 1; animation: draw 1.4s 1.7s cubic-bezier(0.5, 0, 0.3, 1) forwards, fade 0.9s 3.6s ease-out forwards; }
-  .rule-art path { stroke-dashoffset: 1; animation: draw 1s 3.1s cubic-bezier(0.4, 0, 0.3, 1) forwards; }
-}
-@keyframes fade { to { opacity: 0; } }
 .page-note { margin-top: 3rem; font-size: 1rem; max-width: 36rem; }
 
 /* ---------- Inner pages: outlined numeral, italic title, dek ---------- */
