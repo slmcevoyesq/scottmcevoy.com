@@ -216,6 +216,28 @@ a:hover { text-decoration-color: var(--accent); }
 .footnote a { text-decoration-color: var(--rule); }
 .footnote a:hover { color: var(--ink); text-decoration-color: var(--accent); }
 .footnote:target { color: var(--ink); }
+
+/* The footnote's rule: a small golden spiral unfurls beneath the line, then fades into a light underline.
+   Static (just the underline) when motion is reduced. */
+.hero .footnote { padding-bottom: 1.4em; }
+.unfurl { position: relative; display: inline-block; }
+.spiral-art, .rule-art { position: absolute; overflow: visible; max-width: none; pointer-events: none; }
+.spiral-art { top: 100%; right: 100%; width: 0.765em; height: 1.19em; }
+.rule-art { top: 100%; left: 0; width: 100%; height: 1px; }
+.spiral-art path, .rule-art path {
+  fill: none;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+  stroke-dashoffset: 0;
+  vector-effect: non-scaling-stroke;
+}
+.spiral-art path { stroke: var(--accent); stroke-width: 1px; opacity: 0; }
+.rule-art path { stroke: var(--rule); stroke-width: 1px; }
+@media (prefers-reduced-motion: no-preference) {
+  .spiral-art path { stroke-dashoffset: 1; opacity: 1; animation: draw 1.4s 1.7s cubic-bezier(0.5, 0, 0.3, 1) forwards, fade 0.9s 3.6s ease-out forwards; }
+  .rule-art path { stroke-dashoffset: 1; animation: draw 1s 3.1s cubic-bezier(0.4, 0, 0.3, 1) forwards; }
+}
+@keyframes fade { to { opacity: 0; } }
 .page-note { margin-top: 3rem; font-size: 1rem; max-width: 36rem; }
 
 /* ---------- Inner pages: outlined numeral, italic title, dek ---------- */
@@ -279,6 +301,7 @@ a:hover { text-decoration-color: var(--accent); }
   background: var(--tile);
   box-shadow: 0 1px 2px rgb(42 39 35 / 0.04), 0 10px 30px -14px rgb(42 39 35 / 0.18);
 }
+.shot a { display: block; }
 .shot img { width: 100%; }
 .tile {
   position: relative;
@@ -380,6 +403,10 @@ abbr[title] { text-decoration: none; cursor: help; }
 }
 .page > .group:first-of-type, .shelf:first-child .group { margin-top: 0; }
 .group-note { margin: -0.4rem 0 1rem; max-width: 38rem; font-style: italic; color: var(--muted); }
+.jump { margin: 0 0 2.5rem; max-width: 46rem; }
+.jump ul { display: flex; flex-wrap: wrap; gap: 0.3rem 1.25rem; list-style: none; margin: 0; padding: 0; font-size: 0.9375rem; font-style: italic; }
+.jump a { text-decoration-color: var(--rule); }
+.jump a:hover { text-decoration-color: var(--accent); }
 .aside-note { margin-top: 2.5rem; max-width: 38rem; font-size: 0.9375rem; font-style: italic; color: var(--muted); }
 .contact { margin-top: 3rem; font-size: 1.3rem; }
 .contact .aside { display: block; margin-top: 0.3rem; font-size: 1rem; font-style: italic; color: var(--muted); }
