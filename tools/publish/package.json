@@ -1,0 +1,17 @@
+{
+  "name": "scottmcevoy-publish",
+  "private": true,
+  "type": "module",
+  "description": "Renders posts/*.md into /thoughts/ and /feed.xml.",
+  "scripts": {
+    "build": "node build.mjs",
+    "check": "node build.mjs --dry-run"
+  },
+  "dependencies": {
+    "gray-matter": "4.0.3",
+    "marked": "15.0.12",
+    "marked-footnote": "1.2.4",
+    "marked-smartypants": "1.1.9",
+    "smartypants": "0.2.2"
+  }
+}
