@@ -1,0 +1,67 @@
+# Builds posts/*.md into the site and opens a pull request for review.
+# Nothing goes live until Scott merges the PR; GitHub Pages deploys from main.
+#
+# Runs when posts change on main, every morning at 6 a.m. ET (to pick up
+# scheduled posts whose date has arrived), and on demand from the Actions tab.
+
+name: Publish posts
+
+on:
+  push:
+    branches: [main]
+    paths: ['posts/**', 'tools/publish/**']
+  schedule:
+    - cron: '0 11 * * *' # 06:00 EST / 07:00 EDT
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: publish-posts
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Install
+        working-directory: tools/publish
+        run: npm install --no-audit --no-fund
+
+      - name: Build
+        id: build
+        working-directory: tools/publish
+        run: |
+          node build.mjs | tee build.log
+          {
+            echo 'log<<EOF'
+            cat build.log
+            echo 'EOF'
+          } >> "$GITHUB_OUTPUT"
+          rm build.log
+
+      - name: Open pull request for review
+        uses: peter-evans/create-pull-request@v7
+        with:
+          branch: publish/posts
+          delete-branch: true
+          commit-message: 'Publish posts'
+          title: 'Publish posts: ready for review'
+          body: |
+            The publisher rebuilt the Thoughts pages. Review the diff, then merge to publish.
+
+            ```
+            ${{ steps.build.outputs.log }}
+            ```
+          add-paths: |
+            thoughts/**
+            feed.xml
+          labels: publish
